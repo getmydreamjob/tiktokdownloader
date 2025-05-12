@@ -17,7 +17,7 @@ if st.button("Download"):
     if url.strip():
         ydl_opts = {
             'outtmpl': os.path.join(DOWNLOAD_FOLDER, '%(title)s.%(ext)s'),
-            'format': 'bestvideo+bestaudio/best',
+            'format': 'best',  # ✅ this ensures audio+video together
             'noplaylist': True,
             'quiet': True
         }
